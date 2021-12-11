@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 
 	"github.com/damon-myers/aoc-2021/day1"
 	"github.com/damon-myers/aoc-2021/day2"
@@ -15,9 +16,13 @@ func main() {
 		3: day3.Run,
 	}
 
-	infilePtr := flag.String("infile", "inputs/day1.txt", "path to the input file")
+	infilePtr := flag.String("infile", "", "path to the input file")
 	dayPtr := flag.Int("d", 1, "which day to run")
 	flag.Parse()
+
+	if *infilePtr == "" {
+		*infilePtr = fmt.Sprintf("inputs/day%d.txt", *dayPtr)
+	}
 
 	days[*dayPtr](*infilePtr)
 }
