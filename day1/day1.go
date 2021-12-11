@@ -1,8 +1,7 @@
-package main
+package day1
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -71,11 +70,8 @@ func calcNumIncreasesSliding(depths []int, windowSize int) int {
 	return counter
 }
 
-func main() {
-	infilePtr := flag.String("infile", "inputs/day1.txt", "path to the input file")
-	flag.Parse()
-
-	depths := readInput(*infilePtr)
+func Run(filename string) {
+	depths := readInput(filename)
 
 	numIncreases := calcNumIncreases(depths)
 	fmt.Println("Number of increases:", numIncreases)

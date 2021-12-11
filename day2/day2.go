@@ -1,8 +1,7 @@
-package main
+package day2
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -88,11 +87,8 @@ func calculatePositionAndAim(commands []SubmarineCommand) (SubmarinePosition, in
 	return subPos, aim
 }
 
-func main() {
-	infilePtr := flag.String("infile", "inputs/day2.txt", "path to the input file")
-	flag.Parse()
-
-	commands := readInput(*infilePtr)
+func Run(filename string) {
+	commands := readInput(filename)
 
 	result1 := calculatePosition(commands)
 
