@@ -7,6 +7,7 @@ import (
 	"github.com/damon-myers/aoc-2021/day1"
 	"github.com/damon-myers/aoc-2021/day2"
 	"github.com/damon-myers/aoc-2021/day3"
+	"github.com/damon-myers/aoc-2021/day4"
 )
 
 func main() {
@@ -14,6 +15,7 @@ func main() {
 		1: day1.Run,
 		2: day2.Run,
 		3: day3.Run,
+		4: day4.Run,
 	}
 
 	infilePtr := flag.String("infile", "", "path to the input file")

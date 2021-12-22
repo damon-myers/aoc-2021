@@ -12,8 +12,8 @@
       "program": "${workspaceRoot}",
       "args": [
         "-d",
-        "3",
-        "-infile=inputs/day3-test.txt"
+        "4",
+        "-infile=inputs/day4-test.txt"
       ]
     }
   ]
